@@ -30,4 +30,4 @@ jobs:
           action: "upload"
           app_location: "save-email" # App location (where your static files live)
           api_location: ""           # No Azure Functions in this repo
-          output_location: ""        # Static files are served directly from `save-email`
+          output_location: "."       # Output is the app folder itself (relative to app_location)
