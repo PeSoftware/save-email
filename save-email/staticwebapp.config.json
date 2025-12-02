@@ -1,0 +1,20 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/*.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/api/*",
+      "serve": "/api/*"
+    }
+  ],
+  "mimeTypes": {
+    ".json": "text/json",
+    ".wasm": "application/wasm"
+  }
+}
