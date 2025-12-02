@@ -4,17 +4,25 @@
   },
   "routes": [
     {
-      "route": "/*",
-      "serve": "/*.html",
+      "route": "/save-email/*",
+      "serve": "/save-email/*",
       "statusCode": 200
     },
     {
-      "route": "/api/*",
-      "serve": "/api/*"
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
     }
   ],
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Max-Age": "86400"
+  },
   "mimeTypes": {
-    ".json": "text/json",
-    ".wasm": "application/wasm"
+    ".js": "application/javascript",
+    ".html": "text/html",
+    ".json": "text/json"
   }
 }

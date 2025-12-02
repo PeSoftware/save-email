@@ -1,5 +1,11 @@
 
 // /save-email/taskpane.js
+Office.onReady((info) => {
+  if (info.host === Office.HostType.Outlook) {
+    console.log("Office Add-in loaded in Outlook");
+  }
+});
+
 async function getContext() {
   const item = Office.context.mailbox.item;
   const token = await OfficeRuntime.auth.getAccessToken({ allowSignInPrompt: true });
